@@ -24,9 +24,7 @@ async def mem(ctx):
     
     img_to_send = random.choice(img_mem)
     with open(f'images/{img_to_send}', 'rb') as f:
-        # ¡Vamos a almacenar el archivo de la biblioteca Discord convertido en esta variable!
         picture = discord.File(f)
-    # A continuación, podemos enviar este archivo como parámetro.
     await ctx.send(file=picture)
 
 @bot.command()
@@ -36,9 +34,7 @@ async def animal(ctx):
     
     img_to_send_ani = random.choice(img_ani)
     with open(f'animales/{img_to_send_ani}', 'rb') as f:
-        # ¡Vamos a almacenar el archivo de la biblioteca Discord convertido en esta variable!
         picture = discord.File(f)
-    # A continuación, podemos enviar este archivo como parámetro.
     await ctx.send(file=picture)
 
 bot.run("Token")
